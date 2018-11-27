@@ -8,9 +8,7 @@ import { EmployeerComponent } from './employeer.component';
 const routes: Routes = [
  {
     path: 'employer', component : EmployeerComponent, children: [
-      {
-        path:' ',component:NewJobComponent
-      },
+
       {
          path : 'newjob', component : NewJobComponent
       },
@@ -18,7 +16,7 @@ const routes: Routes = [
           path : 'jobs', component: PostedJobsComponent
       },
       {
-        path:'*',component:NewJobComponent
+        path:'**',component:PostedJobsComponent
       },
 ]
  }

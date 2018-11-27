@@ -17,7 +17,8 @@ const routes: Routes = [
       },
       {
     path : 'jobs', component: JobsComponent
-      }
+      },
+      {path:'**',component:JobsComponent}
 
 ]
  }

@@ -11,15 +11,16 @@ export class HeaderComponent implements OnInit {
   constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
-    this.empId=this.route.snapshot.paramMap.get('empId')
+    this.empId=this.route.snapshot.paramMap.get('empId');
+    console.log(this.empId);
   }
   navigateNewForm(){
-    this.router.navigate(['/newForm',this.empId]);
+    this.router.navigate(['/employer/newForm',this.empId]);
   }
   navigateJobs(){
-    this.router.navigate(['/jobs',this.empId]);
+    this.router.navigate(['/employer/jobs',this.empId]);
   }
   navigateShortlist(){
-    this.router.navigate(['/shortlist',this.empId]);
+    this.router.navigate(['/employer/shortlist',this.empId]);
   }
 }

@@ -29,6 +29,7 @@ export class PostedJobsComponent implements OnInit {
  
   ngOnInit() {
     this.empId=this.route.snapshot.paramMap.get("empId");
+    console.log(this.empId);
     this.service.getJobApplication(this.empId).subscribe(data => {
 
     this.jobApplications = data;

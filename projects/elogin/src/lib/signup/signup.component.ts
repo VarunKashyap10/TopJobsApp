@@ -44,9 +44,13 @@ export class SignupComponent implements OnInit {
     this.logSign.password=values.password;
     this.service.requestLogin(values.empId,values.password).subscribe( data =>{
       this.logSignNew=data;
-      if(this.logSignNew!=null)
-      alert("successfully login");
+      console.log(data);
+      if(this.logSignNew){
+        alert("successfully login");
+        this.router.navigate(['/employer/jobs',this.logSign.empId]);
+      }
       else alert("login failed");
+      this.formBuilder=null;
       
     });   
 }

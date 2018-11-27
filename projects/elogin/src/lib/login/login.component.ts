@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
            {
            
             alert("User created SuccessFully.");
-            this.router.navigate(["/elogin/login"]);
+            this.router.navigate(["/employer/newjob"]);
         }
         });
 

@@ -20,7 +20,7 @@ export class CandidateListComponent implements OnInit {
   //dataSource = new MatTableDataSource<Resume>(this.ELEMENT_DATA);
   dataSource:Resume[];
   selection = new SelectionModel<Resume>(true, []);
-  empId:String;
+  empId:string;
 
   constructor(private resumeService:ResumeService,private route:ActivatedRoute,private dialog:MatDialog){
 
@@ -30,7 +30,7 @@ export class CandidateListComponent implements OnInit {
     console.log(this.jobId);
     this.getResumeListForJob(this.jobId);
   }
-  getResumeListForJob(jobId:String){
+  getResumeListForJob(jobId:string){
 
     this.resumeService.getResumeListForJob(this.empId,jobId).subscribe(data=>{
       console.log(data);

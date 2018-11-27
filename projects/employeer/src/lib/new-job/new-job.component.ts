@@ -82,6 +82,7 @@ export class NewJobComponent implements OnInit {
     this.service.postJobApplication(this.job).subscribe(data => {
       console.log(data);
       alert("Job posted SuccessFully.");
+      this.router.navigate(['/employer/jobs',this.empId]);
     });
   }
 
